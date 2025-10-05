@@ -15,7 +15,7 @@ st.set_page_config(
 @st.cache_data # Cache the data loading function (run faster on reruns - 
 # Streamlit normally runs your whole script from top to bottom every time something changes - that`s why caching is important)
 def load_data():
-    df = pd.read_csv("superstore.csv", encoding="latin1")
+    df = pd.read_csv("Superstore.csv", encoding="latin1")
     df["Order Date"] = pd.to_datetime(df["Order Date"])
     df["Ship Date"] = pd.to_datetime(df["Ship Date"])
     df["Year"] = df["Order Date"].dt.year
